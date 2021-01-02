@@ -1,5 +1,5 @@
 {
-  "name": "crfsuite",
+  "name": "@mathquis/crfsuite",
   "version": "1.0.1",
   "description": "NodeJS binding for CRFsuite",
   "main": "index.js",
@@ -12,28 +12,28 @@
     "build": "node-pre-gyp rebuild",
     "install": "node-pre-gyp install --fallback-to-build",
     "test": "tape test/start.js | tap-spec",
-    "publish-binary": "git commit --allow-empty -m \"[publish binary]\""
+    "publish-binary": "npm run config && npm run build && node-pre-gyp package && node-pre-gyp-github publish --release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vunb/node-crfsuite.git"
+    "url": "git+https://github.com/mathquis/node-crfsuite.git"
   },
   "keywords": [
     "crf",
     "crfsuite",
     "data-science"
   ],
-  "author": "vunb",
+  "author": "mathquis",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vunb/node-crfsuite/issues"
+    "url": "https://github.com/mathquis/node-crfsuite/issues"
   },
-  "homepage": "https://github.com/vunb/node-crfsuite#readme",
+  "homepage": "https://github.com/mathquis/node-crfsuite#readme",
   "binary": {
     "module_name": "crfsuite",
     "module_path": "./lib/binding/{node_napi_label}",
     "package_name": "{module_name}-{platform}-{arch}-{node_napi_label}.tar.gz",
-    "host": "https://github.com/vunb/node-crfsuite/releases/download/",
+    "host": "https://github.com/mathquis/node-crfsuite/releases/download/",
     "remote_path": "{version}",
     "napi_versions": [
       1,
