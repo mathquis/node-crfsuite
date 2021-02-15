@@ -8,6 +8,7 @@
     "node": ">=8.0.0"
   },
   "scripts": {
+    "preinstall": "npm install @mapbox/node-pre-gyp",
     "config": "node-pre-gyp configure",
     "build": "node-pre-gyp rebuild",
     "install": "node-pre-gyp install --fallback-to-build",
@@ -52,11 +53,11 @@
   ],
   "dependencies": {
     "node-addon-api": "^1.6.3",
-    "node-pre-gyp": "^0.13.0"
+    "@mapbox/node-pre-gyp": "^1.0.0"
   },
   "devDependencies": {
     "node-gyp": "^4.0.0",
-    "node-pre-gyp-github": "^1.4.3",
+    "@mathquis/node-pre-gyp-github": "^1.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.11.0"
   }
